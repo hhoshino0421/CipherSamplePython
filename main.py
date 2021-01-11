@@ -1,6 +1,7 @@
 from ReverseCipher import *
 from CaesarCipher import *
 from CaesarHacker import *
+from TranspositionEncrypt import *
 from Const import *
 
 
@@ -62,6 +63,22 @@ def main():
         caesar_hacker(message)
 
         return
+
+    elif mode == TRANSPOSITION_ENCRYPT:
+        # 転置式暗号 暗号化
+        # キー長の入力
+        input_key = input("key: ")
+
+        try:
+            # キー長を数値化
+            key = int(input_key)
+
+        except ValueError:
+            print("key is numeric.")
+            return
+
+        # 転置式暗号 暗号化処理
+        translated = transposition_encrypt(message, key)
 
     else:
         # 暗号化モード指定不備

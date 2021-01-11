@@ -5,6 +5,7 @@ CAESAR_SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
 REVERSE_CIPHER = 1      # 逆転値暗号
 CAESAR_CIPHER = 2       # シーザー暗号
 CAESAR_HACKER = 3       # シーザー暗号 総当たり攻撃
+TRANSPOSITION_ENCRYPT = 4       # 転置式暗号 暗号化
 
 # 暗号化/復号化モード指定
 ENCRYPT = 1             # 暗号化処理モード
