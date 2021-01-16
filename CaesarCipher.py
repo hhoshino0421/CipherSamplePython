@@ -2,14 +2,14 @@ from Const import *
 
 
 # シーザー暗号処理(暗号化/復号化処理)
-def caesar_cipher(mesaage, key, enc_dec_mode):
+def caesar_cipher(message, key, enc_dec_mode):
 
     # シーザ暗号化処理可能な文字種の長さ取得
     symbols_len = len(CAESAR_SYMBOLS)
 
     translated = ""
 
-    for symbol in mesaage:
+    for symbol in message:
 
         if symbol in CAESAR_SYMBOLS:
             # 変換可能な文字種に限定して変換処理を実行する
