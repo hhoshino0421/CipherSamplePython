@@ -1,6 +1,9 @@
 # シーザー暗号での変換可能な文字種定義
 CAESAR_SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?."
 
+# 転置式暗号のテストで利用可能なメッセージ定義
+TRANSPOSITION_TEST_MESSAGE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 # 暗号化モード指定
 REVERSE_CIPHER = 1      # 逆転値暗号
 CAESAR_CIPHER = 2       # シーザー暗号

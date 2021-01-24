@@ -19,7 +19,7 @@ def transposition_decrypt(message, key):
         column += 1
 
         if (column == num_of_columns) or \
-                (column == num_of_rows - 1
+                (column == num_of_columns - 1
                  and row >= num_of_rows - num_of_shaded_boxs):
             column = 0
             row += 1
