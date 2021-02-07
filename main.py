@@ -98,6 +98,20 @@ def main():
         # 転置式暗号 復号化処理
         translated = transposition_decrypt(message, key)
 
+    elif mode == TRANSPOSITION_FILE_ENC_DEC:
+        # 転置式ファイル暗号処理
+        # キー長の入力
+        input_key = input("key: ")
+
+        try:
+            # キー長を数値化
+            key = int(input_key)
+
+        except ValueError:
+            print("key is numeric.")
+            return
+
+
     else:
         # 暗号化モード指定不備
         print("mode is ignore.")
