@@ -4,6 +4,7 @@ from CaesarHacker import *
 from TranspositionEncrypt import *
 from TranspositionDecrypt import *
 from Const import *
+from TranspositionFileCipher import *
 
 
 # メイン処理関数
@@ -100,17 +101,52 @@ def main():
 
     elif mode == TRANSPOSITION_FILE_ENC_DEC:
         # 転置式ファイル暗号処理
+
+        input_in_file_name = input("input_file: ")
+        if not input_in_file_name:
+            print("input file is required.")
+            return
+
+        output_file_name = input("output_file: ")
+        if not output_file_name:
+            print("output file is required.")
+            return
+
+        input_enc_dec_mode = input("Encrypt=1 or Decrypt=2 ?:")
+
+        try:
+            # 暗号化/復号化モード指定を数値化チェック
+            int(input_enc_dec_mode)
+
+        except ValueError:
+            print("end mode is numeric.")
+            return
+
         # キー長の入力
         input_key = input("key: ")
 
         try:
-            # キー長を数値化
-            key = int(input_key)
+            # キー長を数値化チェック
+            int(input_key)
 
         except ValueError:
             print("key is numeric.")
             return
 
+        # ファイル暗号化/復号化処理実行
+        result, error_message = \
+            file_encrypt(input_in_file_name, output_file_name, input_enc_dec_mode, input_key)
+
+        if result:
+            # 正常終了
+            print("Success.")
+        else:
+            # 異常終了
+            print("Error.")
+            print(error_message)
+
+        # 処理結果文字列出力処理をバイパスして処理終了
+        return
 
     else:
         # 暗号化モード指定不備

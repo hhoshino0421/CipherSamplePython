@@ -1,0 +1,14 @@
+単体テスト用コマンドメモ
+
+6
+1
+/Users/hhoshino/develop/PyCharm_workspace/CiperSample/Test1_PlaneText.txt
+/Users/hhoshino/develop/PyCharm_workspace/CiperSample/Test1_Enc.txt
+10
+
+
+6
+2
+/Users/hhoshino/develop/PyCharm_workspace/CiperSample/Test1_Enc.txt
+/Users/hhoshino/develop/PyCharm_workspace/CiperSample/Test1_Dectext.txt
+10
